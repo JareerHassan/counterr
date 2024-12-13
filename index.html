@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
     <style>
-        body {
+        .body {
             font-family: Arial;
             text-align: center;
             margin-top: 50px;
             background-image:url('https://img.freepik.com/free-photo/pink-gerbera-flower-with-petals-blue-table_23-2148069182.jpg?ga=GA1.1.263742761.1727317733&semt=ais_hybrid');
             background-repeat: no-repeat;
             background-size: cover;
-            
+            height: 100vh;
+           
         }
         #counter {
             font-size:2em;
@@ -118,15 +119,29 @@
   background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
   color:#D4EBF8;
 }
+@media screen and(max-width:200px) {
+  .body{
+          
+          height: auto;
+          font-size: 12px;
+  }
+
+       
+    
+      
+  
+  
+}
+
       
     </style>
 </head>
-<body>
+<body class="body">
 
     <div id="counter">0</div>
     <div>
         <button class="add-btn" onclick="increment()">Add</button>
-        <button class="subtract-btn" onclick="decrement()">Sub</button>
+        <button class="subtract-btn" onclick="decrement()">Subtract</button>
         <button class="reset-btn" onclick="resetCounter()">Reset</button>
         
     </div>
